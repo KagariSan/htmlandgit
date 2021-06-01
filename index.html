@@ -9,15 +9,23 @@
     <script src='resource/main.js'></script>
 </head>
 <body>
+    <!-- TODO: Thêm các element thông báo lỗi
+    Style lại các ô input mà bị lỗi -->
     <form name=register action="/signup" method="post" onsubmit="return validateForm()">
         <h1>Đăng ký (Demo)</h1>
         <hr>
         <label for="name">Họ và Tên</label>
         <input type="text" name="name" id="name">
+        <span class="error" id="errName">* Họ tên là bắt buộc và phải ít nhất 6 kí tự, nhiều nhất 30 kí tự</span>
+
         <label for="age">Tuổi</label>
         <input type="number" name="age" id="age">
+        <span class="error" id="errAge">* Tuổi là bắt buộc và phải lớn hơn 18 bé hơn 20 tuổi</span>
+
         <label for="email">Email</label>
         <input type="text" name="email" id="email">
+        <span class="error" id="errEmail">* Email là bắt buộc và phải đúng cú pháp</span>
+
         <label for="username">Tên đăng nhập</label>
         <input type="text" name="username" id="username">
         <label for="password">Mật khẩu</label>

@@ -1,3 +1,11 @@
-input, label {
+label, textarea {
     display: block;
+}
+input {
+    display: inline-block;
+}
+.error {
+    visibility: hidden;
+    color: red;
+    display: inline-block;
 }
